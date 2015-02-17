@@ -3,6 +3,7 @@ var rename = require('gulp-rename');
 var sprite = require('css-sprite').stream;
 var through2 = require('through2');
 var lwip = require('lwip');
+var sequence = require('run-sequence');
 
 gulp.task('sprite', function(cb){
   return gulp.src('src/*.png')
@@ -59,3 +60,9 @@ gulp.task('lwip-transparent', function(cb){
     }))
     .pipe(gulp.dest('build/'));
 });
+
+gulp.task('build', function(cb){
+  sequence('sprite', 'lwip-background', 'lwip-transparent', cb);
+})
+
+gulp.task('default', ['build'], function(){});
