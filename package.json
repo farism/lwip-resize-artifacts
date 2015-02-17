@@ -1,0 +1,16 @@
+{
+  "name": "lwip-resize-artifacts",
+  "version": "0.0.1",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {
+    "css-sprite": "^0.9.0",
+    "gulp": "^3.8.10",
+    "gulp-rename": "^1.2.0",
+    "lwip": "0.0.6",
+    "through2": "^0.6.3"
+  }
+}
